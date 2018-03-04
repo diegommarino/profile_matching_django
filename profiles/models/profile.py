@@ -13,6 +13,7 @@ class Profile(models.Model):
     about = models.CharField(max_length=255, blank=True, null=True)
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
+    owner = models.OneToOneField('auth.User', related_name='profile', on_delete=models.CASCADE)
 
     class Meta:
         ordering = ('first_name',)
