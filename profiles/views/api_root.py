@@ -9,4 +9,5 @@ def api_root(request, format=None):
         'users': reverse('user-list', request=request, format=format),
         'profiles': reverse('profiles-list', request=request, format=format),
         'topics': reverse('topics-list', request=request, format=format),
+        'token': reverse('get-token', request=request, format=format),
     })
