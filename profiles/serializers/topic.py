@@ -4,10 +4,8 @@ from profile_matching.profiles.models.topic import Topic
 
 
 class TopicSerializer(serializers.ModelSerializer):
-    profiles = serializers.PrimaryKeyRelatedField(many=True, queryset=Profile.objects.all())
+    profiles = serializers.ReadOnlyField()
 
     class Meta:
         model = Topic
-        fields = ('id',
-                  'name',
-                  'profiles')
+        fields = ('id', 'name', 'profiles')

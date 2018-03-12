@@ -1,4 +1,5 @@
 from django.db import models
+from django.contrib.auth import get_user_model
 
 
 def upload_to(instance, filename):
@@ -13,7 +14,7 @@ class Profile(models.Model):
     about = models.CharField(max_length=255, blank=True, null=True)
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
-    owner = models.OneToOneField('auth.User', related_name='profile', on_delete=models.CASCADE)
+    owner = models.OneToOneField(get_user_model(), related_name='profile', on_delete=models.CASCADE)
 
     class Meta:
         ordering = ('first_name',)
