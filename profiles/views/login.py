@@ -11,7 +11,6 @@ from profile_matching.profiles.serializers.auth import SignupSerializer
 @api_view(['POST'])
 @permission_classes((IsAuthenticatedOrReadOnly,))
 def logout(request):
-    import pdb; pdb.set_trace()
     user = get_user_model().objects.filter(auth_token=request.data.get('auth_token')).last()
     user.auth_token.delete()
     return Response({}, status=status.HTTP_200_OK)
