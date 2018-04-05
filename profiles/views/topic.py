@@ -4,7 +4,13 @@ from rest_framework import generics
 from rest_framework import permissions
 
 
-class TopicList(generics.ListCreateAPIView):
+class TopicList(generics.ListAPIView):
+    permission_classes = (permissions.IsAuthenticatedOrReadOnly,)
+    queryset = Topic.objects.all()
+    serializer_class = TopicSerializer
+
+
+class TopicCreate(generics.CreateAPIView):
     permission_classes = (permissions.IsAuthenticatedOrReadOnly,
                           permissions.IsAdminUser)
     queryset = Topic.objects.all()

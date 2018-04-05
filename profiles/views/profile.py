@@ -5,10 +5,15 @@ from rest_framework import permissions
 from profile_matching.profiles.permissions import IsOwnerOrReadOnly
 
 
-class ProfileList(generics.ListCreateAPIView):
+class ProfileList(generics.CreateAPIView):
     permission_classes = (permissions.IsAuthenticatedOrReadOnly,
                           permissions.IsAdminUser)
     queryset = Profile.objects.all()
+    serializer_class = ProfileSerializer
+
+
+class ProfileCreate(generics.CreateAPIView):
+    permission_classes = (permissions.IsAuthenticatedOrReadOnly,)
     serializer_class = ProfileSerializer
 
     def perform_create(self, serializer):
