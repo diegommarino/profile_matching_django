@@ -1,4 +1,4 @@
-from profile_matching.profiles.serializers.user import UserSerializer
+from profiles.serializers.user import UserSerializer
 from rest_framework import generics
 from django.contrib.auth import get_user_model
 from rest_framework import permissions

@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from profile_matching.profiles.models.profile import Profile
+from profiles.models.profile import Profile
 from django.contrib.auth import get_user_model
 from rest_framework.authtoken.models import Token
 

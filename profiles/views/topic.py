@@ -1,5 +1,5 @@
-from profile_matching.profiles.models.topic import Topic
-from profile_matching.profiles.serializers.topic import TopicSerializer
+from profiles.models.topic import Topic
+from profiles.serializers.topic import TopicSerializer
 from rest_framework import generics
 from rest_framework import permissions
 

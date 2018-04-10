@@ -1,6 +1,6 @@
 from rest_framework import serializers
-from profile_matching.profiles.models.profile import Profile
-from profile_matching.profiles.models.topic import Topic
+from profiles.models.profile import Profile
+from profiles.models.topic import Topic
 
 
 class ProfileSerializer(serializers.ModelSerializer):

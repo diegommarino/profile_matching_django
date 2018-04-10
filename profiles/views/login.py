@@ -3,9 +3,9 @@ from rest_framework.permissions import AllowAny, IsAuthenticatedOrReadOnly
 from rest_framework.response import Response
 from rest_framework import status
 from django.contrib.auth import get_user_model
-from profile_matching.profiles.serializers.user import UserSerializer
-from profile_matching.profiles.serializers.auth import SigninSerializer
-from profile_matching.profiles.serializers.auth import SignupSerializer
+from profiles.serializers.user import UserSerializer
+from profiles.serializers.auth import SigninSerializer
+from profiles.serializers.auth import SignupSerializer
 
 
 @api_view(['POST'])

@@ -7,6 +7,6 @@ from django.urls import path
 # Additionally, we include login URLs for the browsable API.
 urlpatterns = [
     path('admin/', admin.site.urls),
-    url(r'^', include('profile_matching.profiles.urls')),
+    url(r'^', include('profiles.urls')),
     url(r'^api-auth/', include('rest_framework.urls')),
 ]

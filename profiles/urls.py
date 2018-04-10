@@ -1,10 +1,10 @@
 from django.conf.urls import url
 from rest_framework.urlpatterns import format_suffix_patterns
-from profile_matching.profiles.views import user
-from profile_matching.profiles.views import profile
-from profile_matching.profiles.views import topic
-from profile_matching.profiles.views import api_root
-from profile_matching.profiles.views import login
+from profiles.views import user
+from profiles.views import profile
+from profiles.views import topic
+from profiles.views import api_root
+from profiles.views import login
 from rest_framework.authtoken import views
 
 

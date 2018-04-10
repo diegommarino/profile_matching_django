@@ -1,8 +1,8 @@
-from profile_matching.profiles.models.profile import Profile
-from profile_matching.profiles.serializers.profile import ProfileSerializer
+from profiles.models.profile import Profile
+from profiles.serializers.profile import ProfileSerializer
 from rest_framework import generics
 from rest_framework import permissions
-from profile_matching.profiles.permissions import IsOwnerOrReadOnly
+from profiles.permissions import IsOwnerOrReadOnly
 
 
 class ProfileList(generics.CreateAPIView):

@@ -3,7 +3,7 @@
 from django.conf import settings
 from django.db import migrations, models
 import django.db.models.deletion
-import profile_matching.profiles.models.profile
+import profiles.models.profile
 
 
 class Migration(migrations.Migration):
@@ -22,7 +22,7 @@ class Migration(migrations.Migration):
                 ('first_name', models.CharField(max_length=100)),
                 ('last_name', models.CharField(max_length=100)),
                 ('current_position', models.CharField(max_length=64)),
-                ('avatar', models.ImageField(blank=True, null=True, upload_to=profile_matching.profiles.models.profile.upload_to)),
+                ('avatar', models.ImageField(blank=True, null=True, upload_to=profiles.models.profile.upload_to)),
                 ('about', models.CharField(blank=True, max_length=255, null=True)),
                 ('created_at', models.DateTimeField(auto_now_add=True)),
                 ('updated_at', models.DateTimeField(auto_now=True)),

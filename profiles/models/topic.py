@@ -1,5 +1,5 @@
 from django.db import models
-from profile_matching.profiles.models.profile import Profile
+from profiles.models.profile import Profile
 
 
 class Topic(models.Model):
